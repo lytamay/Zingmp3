@@ -1,0 +1,10 @@
+.khampha {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.out-content {
+    position: absolute;
+    top: 60px;
+    color: blanchedalmond;
+}

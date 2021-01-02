@@ -1,0 +1,136 @@
+.wraper-navbar-header {
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    /* width: 100%; */
+    /* height: 60px; */
+    /* background: rgba(61, 11, 85, 0.7); */
+}
+.wraper-navbar-header ul {
+    width: 78%;
+    position: fixed;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+}
+.wraper-navbar-header ul li {
+    color: white;
+    padding: 12px;
+}
+.wraper-navbar-header ul li a {
+    color: white;
+}
+.wraper-navbar-header ul li a .fa {
+    color: white;
+}
+.wraper-navbar-header ul li a .box-search {
+    width: 450px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgba(61, 11, 85, 0.7);
+}
+.box-search span {
+    width: 20px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    width: 20px;
+    height: 27px;
+}
+.box-search input {
+    width: 80%;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    color: rgb(255, 249, 249);
+    background: none;
+    padding-bottom: 5px;
+}
+.zma2020 {
+    text-align: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.zma2020:hover {
+    background-color: rgba(79, 19, 107, 0.7);
+}
+.btn-gopy {
+    font-size: 14px;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 19px;
+    background-color: rgba(247, 10, 187, 0.912);
+}
+.out-fas {
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 50%;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(79, 19, 107, 0.3);
+    transition: all 0.3s ease-in;
+}
+.out-fas:hover {
+    background-color: rgba(95, 17, 131, 0.3);
+}
+.fas-Filer {
+    margin-left: 10px;
+    margin-top: 12px;
+    position: absolute;
+    text-align: center;
+    outline: none;
+}
+.fas-Filer-tootip {
+    border: 1px solid #fff;
+}
+
+.fas-upload {
+    margin-left: 10px;
+    margin-top: 12px;
+    position: absolute;
+    text-align: center;
+    outline: none;
+}
+
+.fas-cog {
+    margin-left: 10px;
+    margin-top: 12px;
+    position: absolute;
+    text-align: center;
+    outline: none;
+}
+.out-user {
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 50%;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(124, 113, 129, 0.3);
+}
+.fas-user {
+    margin-left: 10px;
+    margin-top: 12px;
+    position: absolute;
+    text-align: center;
+    outline: none;
+}
+.out-user:hover {
+    background-color: rgb(218, 204, 185);
+}

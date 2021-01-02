@@ -1,0 +1,52 @@
+.wrap-carousel {
+    position: relative;
+    width: 980px;
+    height: 230px;
+    background-color: red;
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.carosel-container {
+    display: flex;
+    justify-content: center;
+    align-items: 980center;
+    flex-direction: row;
+    width: fit-content;
+}
+.wrap-carousel button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-color: rgba(245, 245, 245, 0.1);
+    color: white;
+}
+.wrap-carousel button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.wrap-carousel .carousel-btn-pre {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+}
+.wrap-carousel .carousel-btn-next {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+}
+.itemSlider {
+    width: 980px;
+    height: 230px;
+    transition: 0.5s;
+}

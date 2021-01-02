@@ -1,0 +1,76 @@
+.box-itemTop100 {
+    width: 180px;
+    height: 240px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0, 7);
+    /* overflow: hidden; */
+}
+.box-itemTop100-content {
+    height: 180px;
+    position: relative;
+}
+.box-itemTop100-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.box-itemTop100-content .box-itemTop100-content-title {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    color: black;
+}
+.box-itemTop100-content-title p {
+    font-size: 16px;
+    letter-spacing: 20px;
+}
+.box-itemTop100-content-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
+.box-itemTop100-content-title h2 {
+    font-size: 25px;
+}
+.box-itemTop100-icon {
+    /* visibility: hidden; */
+    position: absolute;
+    color: black;
+    top: 40%;
+    display: flex;
+}
+
+.box-itemTop100-icon ul {
+    visibility: hidden;
+    display: flex;
+    list-style: none;
+    z-index: 999;
+}
+.box-itemTop100-icon ul li a {
+    color: black;
+    margin: 20px;
+    width: 23px;
+    height: 24px;
+}
+.box-itemTop100 .box-itemTop100-detail {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    position: relative;
+}
+.box-itemTop100 .box-itemTop100-detail a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in;
+}
+.box-itemTop100 .box-itemTop100-detail a:hover {
+    color: rgb(157, 42, 185);
+}
+.box-itemTop100 .box-itemTop100-detail p {
+    position: absolute;
+    left: 60%;
+    top: 30px;
+    width: 100%;
+    opacity: 999;
+    border: 1px 2px rgb(180, 144, 144);
+}

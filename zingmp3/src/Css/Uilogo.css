@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+* {
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Abril", sans-serif;
+}
+body {
+    background-color: rgb(48, 16, 63);
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container ul {
+    position: relative;
+    margin: 250px;
+    display: flex;
+    align-items: flex-end;
+    animation: animate 4s linear 0s 1 alternate;
+}
+@keyframes animate {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.container ul li {
+    list-style: none;
+    text-align: center;
+}
+.zing {
+    font-weight: 700;
+    font-size: 100px;
+    -webkit-text-stroke: 4px #fff;
+}
+.zing1 {
+    color: rgb(24, 169, 236);
+}
+.zing2 {
+    color: rgb(0, 255, 0, 0.9);
+}
+.zing3 {
+    color: #ff6600;
+}
+.zing4 {
+    color: rgb(218, 23, 169);
+}
+.mp3 {
+    padding-top: 18px;
+    font-size: 12vh;
+    color: #fff;
+}
+.content {
+    position: absolute;
+    color: #fff;
+    opacity: 0;
+    font-size: 50px;
+    box-shadow: 2px rgb(165, 58, 207);
+    animation: animateContent 3s linear 4s 1 alternate;
+}
+@keyframes animateContent {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+.title {
+    position: absolute;
+    opacity: 0;
+    animation: titleAnimation 3s linear 7s 1 alternate;
+}
+@keyframes titleAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+.title .title-content {
+    color: white;
+    font-size: 30px;
+}
+
+.title .btn-nghe-nhac {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    top: 200px;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    left: -40px;
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    transition: ease-out 0.4s;
+    animation: animationBtnTitle 2s linear 0s infinite;
+}
+@keyframes animationBtnTitle {
+    0% {
+        background: linear-gradient(
+            to left,
+            transparent,
+            rgba(255, 17, 0, 0.993)
+        );
+    }
+    25% {
+        background: linear-gradient(to left, transparent, rgb(255, 196, 0));
+    }
+    50% {
+        background: linear-gradient(to left, transparent, rgb(9, 255, 0));
+    }
+    75% {
+        background: linear-gradient(to left, transparent, rgb(0, 162, 255));
+    }
+    100% {
+        background: linear-gradient(
+            to left,
+            transparent,
+            rgba(255, 0, 128, 0.7)
+        );
+    }
+}
+.title .btn-nghe-nhac:hover {
+    cursor: pointer;
+    border: 30px 30px 10px 10px #fff;
+}
+
+@media screen and (max-width: 1102px) {
+    .container ul {
+        margin: 250px;
+        display: flex;
+    }
+    .zing {
+        font-weight: 600;
+        font-size: 90px;
+        -webkit-text-stroke: 4px #fff;
+    }
+    .mp3 {
+        padding-top: 13px;
+        font-size: 11vh;
+        color: #fff;
+    }
+    .content {
+        position: absolute;
+        color: #fff;
+        font-size: 46px;
+        box-shadow: 2px rgb(165, 58, 207);
+    }
+}
+
+@media screen and (max-width: 924px) {
+    .container ul {
+        margin: 250px;
+        display: flex;
+    }
+    .zing {
+        font-weight: 500;
+        font-size: 90px;
+        -webkit-text-stroke: 4px #fff;
+    }
+    .mp3 {
+        padding-top: 13px;
+        font-size: 10vh;
+        color: #fff;
+    }
+    .content {
+        position: absolute;
+        color: #fff;
+        font-size: 40px;
+        box-shadow: 2px rgb(165, 58, 207);
+    }
+}
+@media screen and (max-width: 760px) {
+    .content {
+        position: absolute;
+        color: #fff;
+        font-size: 34px;
+        box-shadow: 2px rgb(165, 58, 207);
+    }
+}
+@media screen and (max-width: 600px) {
+    .zing {
+        font-weight: 600;
+        font-size: 80px;
+        -webkit-text-stroke: 3px #fff;
+    }
+    .mp3 {
+        padding-top: 13px;
+        font-size: 9vh;
+        color: #fff;
+    }
+    .content {
+        position: absolute;
+        color: #fff;
+        font-size: 30px;
+        box-shadow: 2px rgb(165, 58, 207);
+    }
+} ;
