@@ -11,7 +11,7 @@ function NavbarLeft() {
                 </div>
                 <ul className="navbar-content">
                     <li>
-                        <Link to="/">
+                        <Link to="/khampha">
                             <FaBeer className="narbar-icon" />
                             Khám phá
                         </Link>

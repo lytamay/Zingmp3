@@ -83,11 +83,13 @@ input[type="range"] {
 
 .playListMusicRight #title {
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 50%;
     transform: translate(-50%);
     color: #fff;
-    font-size: 35px;
+    font-weight: 600;
+    font-size: 20px;
+    overflow: hidden;
 }
 .playListMusicRight #artist {
     position: absolute;
@@ -95,7 +97,8 @@ input[type="range"] {
     left: 50%;
     transform: translate(-50%);
     color: #fff;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .playListMusicRight .duration {

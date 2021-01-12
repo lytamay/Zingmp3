@@ -1,8 +1,10 @@
 import React from "react";
 import NavbarLeft from "../Component/NavbarLeft";
-import ZingChat from "./ZingChat";
+import ZingChart from "./ZingChart";
 import "../Css/Home.css";
 import KhamPha from "./KhamPha";
+import MoiPhatHanh from "./MoiPhatHanh";
+import ArtistInfomation from "./ArtistInfomation";
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,8 +16,6 @@ import {
 import PlayList100 from "./PlayList100";
 
 function Home() {
-    let { path, url } = useRouteMatch();
-
     return (
         <div className="wraper">
             <div className="left">
@@ -23,17 +23,21 @@ function Home() {
             </div>
             <div className="right">
                 <div className="right-box">
-                    <KhamPha />
-                    {/* <Switch>
-                        <Route path="/"> */}
-                    {/* <Topic /> */}
-                    {/* <KhamPha /> */}
-                    {/* </Route> */}
-                    {/* <Route path="/PlayList100">
-                            <PlayList100 />
-                        </Route> */}
-                    {/* </Switch> */}
-                    {/* <PlayList100 /> */}
+                    <Switch>
+                        <Route exact path="/khampha" component={KhamPha} />
+                        <Route exact path="/zingchart" component={ZingChart} />
+                        <Route path="/moiphathanh" component={MoiPhatHanh} />
+                        <Route
+                            path="/album/:id"
+                            exact
+                            component={PlayList100}
+                        />
+                        <Route
+                            path="/thong-tin-ca-si/:name"
+                            exact
+                            component={ArtistInfomation}
+                        />
+                    </Switch>
                 </div>
             </div>
         </div>

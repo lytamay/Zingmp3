@@ -1,10 +1,15 @@
 import React from "react";
 import "../Css/ItemTop100.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { FaHeart, FaPlay, FaSearch } from "react-icons/fa";
 const ItemTop100 = (props) => {
+    let id = props.id;
+    let history = useHistory();
+    const handelRouterPlayMuisic = () => {
+        history.push(`/album/${id}`);
+    };
     return (
-        <div className="box-itemTop100">
+        <div className="box-itemTop100" onClick={handelRouterPlayMuisic}>
             <div className="box-itemTop100-content">
                 <img src={props.src} alt="khong co" />
                 <div className="box-itemTop100-content-title">
@@ -33,10 +38,7 @@ const ItemTop100 = (props) => {
                 </div>
             </div>
             <div className="box-itemTop100-detail">
-                <Link>Top 100 bai hat nhac tre hay nhat</Link>
-                {/* <p className="top100-tooltip">
-                    Top 100 bai hat nhac tre hay nhat
-                </p> */}
+                <p>Top 100 bai hat nhac tre hay nhat</p>
             </div>
         </div>
     );

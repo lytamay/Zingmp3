@@ -1,7 +1,7 @@
 import React from "react";
 
-const ZingChat = () => {
+const ZingChart = () => {
     return <div>Kham pha</div>;
 };
 
-export default ZingChat;
+export default ZingChart;

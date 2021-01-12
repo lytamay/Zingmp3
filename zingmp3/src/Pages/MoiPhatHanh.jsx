@@ -1,5 +1,5 @@
 import React from "react";
-import "../Css/MoiPhatHanh";
+import "../Css/MoiPhatHanh.css";
 const MoiPhatHanh = () => {
     return <div>moiphathanh</div>;
 };

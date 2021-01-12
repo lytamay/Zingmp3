@@ -19,6 +19,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 .item-track-left img {
     position: absolute;
@@ -35,12 +36,15 @@
 }
 .item-track-left-title p {
     color: white;
-    font-size: 18px;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .item-track-left-title a {
     text-decoration: none;
     color: rgb(190, 184, 171);
-    font-size: 15px;
+    font-size: 13px;
     transition: 0.4s;
 }
 .item-track-left-title a:hover {

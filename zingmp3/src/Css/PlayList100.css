@@ -1,5 +1,4 @@
 .PlayList100 {
-    /* position: relative; */
     width: 100%;
     height: 100%;
 }
@@ -7,4 +6,11 @@
     position: absolute;
     top: 60px;
     color: blanchedalmond;
+}
+.PlayList100-Track-List {
+    margin-top: 10px;
+}
+
+.PlayList100-Track-List li {
+    list-style: none;
 }

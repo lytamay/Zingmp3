@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import "../Css/Uilogo.css";
-import { BrowserRouter } from "react-router-dom";
-function Uilogo() {
+import { BrowserRouter, useHistory } from "react-router-dom";
+function Uilogo(props) {
+    let history = useHistory();
     const [logoState, setLogoState] = useState(true);
     const [titleState, setTitleState] = useState(false);
+    const [btnStateForwarkPageHome, setBtnStateForwarkPageHome] = useState(
+        true
+    );
     function handelStateContent() {
         setTimeout(function () {
             setLogoState(false);
@@ -23,9 +27,11 @@ function Uilogo() {
         opacity: titleState ? "100" : "0",
     };
 
-    function handClick() {
-        console.log("click den trang Home");
-    }
+    const handClick = () => {
+        setBtnStateForwarkPageHome(false);
+        // history.push("/home");
+        props.onClick(btnStateForwarkPageHome);
+    };
     return (
         <div className="container">
             <ul className="logo" style={Style}>
@@ -39,9 +45,11 @@ function Uilogo() {
                 <h1>xin chao zingmp3</h1>
                 <h4>thoa suc voi mp3</h4>
             </div>
-            <div className="title" style={StyleTitle} onClick={handClick}>
+            <div className="title" style={StyleTitle}>
                 <div className="title-content">Viet noi dung o day</div>
-                <button className="btn-nghe-nhac">Nghe nhac</button>
+                <button className="btn-nghe-nhac" onClick={handClick}>
+                    Nghe nhac
+                </button>
             </div>
         </div>
     );
