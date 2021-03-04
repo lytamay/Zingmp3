@@ -1,0 +1,26 @@
+.theme-title {
+    color: white;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    transition: 0.4s all ease;
+}
+.theme-title:hover {
+    color: rgb(236, 216, 198);
+}
+.bai-hat {
+    margin-bottom: 10px;
+}
+.box-search-content {
+    margin-bottom: 10px;
+}
+.box-playlist {
+    width: 980px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nghe-si {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

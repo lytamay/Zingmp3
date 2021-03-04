@@ -1,0 +1,86 @@
+.playlist {
+    width: 200px;
+    height: 250px;
+    /* object-fit: cover; */
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #a7a1a1ce;
+    box-sizing: border-box;
+}
+.playlist .playlist-avata {
+    outline: none;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.playlist .playlist-avata img {
+    width: 100%;
+    border-radius: 3px;
+    transition: 0.4s ease-in;
+}
+.playlist span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transform: translate(-50%, -50%);
+    background: none;
+    color: #fff;
+    visibility: hidden;
+    transition: 0.4s ease-in-out;
+    z-index: 99;
+}
+
+.playlist .playlist-avata:hover img {
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+.playlist .playlist-avata:hover span {
+    visibility: visible;
+}
+.playlist .contents {
+    margin: 5px;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+.contents p:nth-child(1) {
+    white-space: nowrap;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+.contents a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+.contents a:hover {
+    color: rgba(180, 72, 22, 0.74);
+}
+.playlist-avata .layer-background {
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    transition: 0.4s;
+    visibility: hidden;
+}
+.playlist-avata:hover .layer-background {
+    visibility: visible;
+}

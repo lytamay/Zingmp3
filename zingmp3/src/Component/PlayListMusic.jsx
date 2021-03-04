@@ -15,21 +15,42 @@ import {
 import "../Css/PlayListMusic.css";
 
 const PlayListMusic = (props) => {
+    let trackList = props.trackList;
     const [isPlaying, setIsPlaying] = useState(false);
     const [isAutoPlay, setIsAutoPlay] = useState(true);
     const [volumeVal, setVolumeVal] = useState(30);
     const [currentTime, setCurrentTime] = useState(0);
     const [isVolumePlay, setIsVolumePlay] = useState(true);
+    const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
     const [duration, setDuration] = useState(0);
     let range = document.querySelector("#duration_slider");
     let rangeTime = document.querySelector("#current_time");
     let voLume = document.querySelector("#volume");
-    let track = props.track;
-    if (track == null) {
+    if (trackList[currentTrackIndex] == null) {
         return "";
     }
-    const previousSong = () => {};
-    const nextSong = () => {};
+    const previousSong = () => {
+        let Aud = document.getElementsByClassName("audio-player")[0];
+        let index = trackList.findIndex(
+            (item) => (item = trackList[currentTrackIndex])
+        );
+        if (index == 0) {
+            setCurrentTrackIndex(0);
+        } else {
+            setCurrentTrackIndex(index--);
+        }
+    };
+    const nextSong = () => {
+        let Aud = document.getElementsByClassName("audio-player")[0];
+        let index = trackList.findIndex(
+            (item) => (item = trackList[currentTrackIndex])
+        );
+        if (index == trackList.length - 1) {
+            setCurrentTrackIndex(0);
+        } else {
+            setCurrentTrackIndex(index++);
+        }
+    };
     const justPlay = () => {
         let Aud = document.getElementsByClassName("audio-player")[0];
         if (isPlaying) {
@@ -44,6 +65,7 @@ const PlayListMusic = (props) => {
         });
         Aud.addEventListener("timeupdate", () => {
             range.value = Aud.currentTime;
+            range.max = Aud.ended;
         });
         let interval = setInterval(() => {
             let time = Math.round(Aud.currentTime);
@@ -57,34 +79,6 @@ const PlayListMusic = (props) => {
                 ).innerHTML = `00:${time}`;
             } else if (time == 60) {
                 document.getElementById("current_time").innerHTML = `01:00`;
-                // } else if (time > 60) {
-                //     let hour =handeVolum = time - (hour * 3600 + minute * 60);
-                //     if (hour < 10 && minute < 10) {
-                //         document.getElementById(
-                //             "current_time"
-                //         ).innerHTML = `0${hour}:0${minute}`;
-                //     } else if (hour > 10 && minute < 10) {
-                //         document.getElementById(
-                //             "current_time"
-                //         ).innerHTML = `${hour}:0${minute}`;
-                //     } else if (hour < 10 && minute > 10) {
-                //         document.getElementById(
-                //             "current_time"
-                //         ).innerHTML = `0${hour}:${minute}`;
-                //     } else if (minute < 10 && second < 10) {
-                //         document.getElementById(
-                //             "current_time"
-                //         ).innerHTML = `0${minute}:0${second}`;
-                //     } else if (minute < 10 && second > 10) {
-                //         document.getElementById(
-                //     isVolumePlay    document.getElementById(
-                //             "current_time"
-                //         ).innerHTML = `${minute}:0${second}`;
-                //     } else {
-                //         document.getElementById(
-                //             "current_time"
-                //         ).innerHTML = `${minute}:${second}`;
-                //     }
             } else {
                 document.getElementById(
                     "current_time"
@@ -95,9 +89,22 @@ const PlayListMusic = (props) => {
             clearInterval(interval);
         }
     };
+    const HieuUngAnh = () => {
+        const imgTrack = document.querySelector(".img-track");
+        if (isPlaying) {
+            // imgTrack.classList.add("imgTogle");
+            setInterval(() => {
+                imgTrack.classList.toggle("imgTogle");
+            }, 1000);
+        } else {
+            clearInterval();
+        }
+    };
+    HieuUngAnh();
     const HanderChangeDuration = () => {
         let Aud = document.getElementsByClassName("audio-player")[0];
-        let length = Aud.duration;
+        const SongAudio = new Audio();
+        let length = SongAudio.duration;
     };
     const autoSwitch = () => {
         let Aud = document.getElementsByClassName("audio-player")[0];
@@ -119,6 +126,7 @@ const PlayListMusic = (props) => {
             setIsVolumePlay(false);
             setVolumeVal(0);
             voLume.value = 0;
+            Aud.volume = 0;
         } else {
             setVolumeVal(Aud.volume * 100);
             setIsVolumePlay(true);
@@ -134,7 +142,11 @@ const PlayListMusic = (props) => {
     return (
         <div className="boxPlayListMusic">
             <div className="playListMusicLeft">
-                <img src={track.album.cover_small} alt="" />
+                <img
+                    className="img-track"
+                    src={trackList[currentTrackIndex].album.cover_xl}
+                    alt=""
+                />
                 <div className="volume">
                     <p id="volume_show">{volumeVal}</p>
                     <span onClick={CheckVolume}>
@@ -155,17 +167,16 @@ const PlayListMusic = (props) => {
                     <p>/</p>
                     <p id="total"> 5</p>
                 </div>
-
-                <p id="title">{track.title} </p>
-                <p id="artist">{track.artist.name}</p>
+                <p id="title">{trackList[currentTrackIndex].title} </p>
+                <p id="artist">{trackList[currentTrackIndex].artist.name}</p>
                 <div className="middle">
-                    <button onClick={previousSong()}>
+                    <button onClick={previousSong}>
                         <FaBackward />
                     </button>
                     <button onClick={justPlay}>
                         {isPlaying ? <FaPause /> : <FaPlay />}
                     </button>
-                    <button onClick={nextSong()}>
+                    <button onClick={nextSong}>
                         <FaForward />
                     </button>
                 </div>
@@ -191,7 +202,7 @@ const PlayListMusic = (props) => {
             </div>
             <div>
                 <audio className="audio-player">
-                    <source src={track.preview} />
+                    <source src={trackList[currentTrackIndex].preview} />
                 </audio>
             </div>
         </div>

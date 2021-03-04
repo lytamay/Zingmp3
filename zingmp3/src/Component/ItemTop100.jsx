@@ -2,8 +2,10 @@ import React from "react";
 import "../Css/ItemTop100.css";
 import { Link, useHistory } from "react-router-dom";
 import { FaHeart, FaPlay, FaSearch } from "react-icons/fa";
+import Loading from "../Component/Loading";
 const ItemTop100 = (props) => {
     let id = props.id;
+    console.log(id);
     let history = useHistory();
     const handelRouterPlayMuisic = () => {
         history.push(`/album/${id}`);
@@ -12,6 +14,7 @@ const ItemTop100 = (props) => {
         <div className="box-itemTop100" onClick={handelRouterPlayMuisic}>
             <div className="box-itemTop100-content">
                 <img src={props.src} alt="khong co" />
+                <div className="layer-background"></div>
                 <div className="box-itemTop100-content-title">
                     <p>top</p>
                     <h1> 100 </h1>

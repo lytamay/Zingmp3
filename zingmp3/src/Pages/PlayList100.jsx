@@ -4,11 +4,14 @@ import ItemTrack from "../Component/ItemTrack";
 import Loading from "../Component/Loading";
 import NavbarHead from "../Component/NavbarHead";
 import PlayListMusic from "../Component/PlayListMusic";
+import RunMusic from "../Component/RunMusic";
 import "../Css/PlayList100.css";
 
 const PlayList100 = (props) => {
     let id = props.id;
     const [playListState, setPlayListState] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [status, setStatus] = useState("");
     useEffect(() => {
         axios
             .get("https://deezerdevs-deezer.p.rapidapi.com/playlist/12233344", {
@@ -33,11 +36,32 @@ const PlayList100 = (props) => {
     for (let i = 0; i < 100; i++) {
         list100.push(playListState[i]);
     }
+    const getCurrentIndex = (status) => {
+        if (
+            (status === "next" && currentIndex < 100) ||
+            (status === "next" && currentIndex > 0)
+        ) {
+            let index = currentIndex;
+            index = index + 1;
+            setCurrentIndex(index);
+        } else if (status === "pre" && currentIndex > 0) {
+            let index = currentIndex;
+            index = index - 1;
+            setCurrentIndex(index);
+        }
+    };
+    const getIndex = (index) => {
+        setCurrentIndex(index);
+    };
     return (
         <div className="PlayList100">
             <NavbarHead />
             <div className="PlayList100-OutContent">
-                <PlayListMusic track={list100[0]} />
+                {/* <PlayListMusic trackList={list100} /> */}
+                <RunMusic
+                    track={list100[currentIndex]}
+                    getStatusIndex={getCurrentIndex}
+                />
                 <ul className="PlayList100-Track-List">
                     {list100.map((track, index) => {
                         if (track == null) {
@@ -45,7 +69,11 @@ const PlayList100 = (props) => {
                         } else {
                             return (
                                 <li key={track.id}>
-                                    <ItemTrack track={track} />
+                                    <ItemTrack
+                                        track={track}
+                                        index={index}
+                                        getIndex={getIndex}
+                                    />
                                 </li>
                             );
                         }

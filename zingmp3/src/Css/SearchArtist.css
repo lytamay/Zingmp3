@@ -1,0 +1,14 @@
+.box-search-artist > p {
+    color: white;
+    font-size: 19px;
+    font-weight: 800px;
+    margin-bottom: 10px;
+}
+
+.list-search-artist {
+    margin-top: 10px;
+    width: 960px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 100px;
+}

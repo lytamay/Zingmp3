@@ -1,0 +1,120 @@
+.InfoArtist {
+    position: absolute;
+    top: 100px;
+    color: blanchedalmond;
+}
+.infoArtistTop {
+    width: 990px;
+    height: 300px;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.infoArtistTop_left {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.infoArtistTop_left h2 {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 600;
+    top: 20px;
+    left: 15px;
+}
+
+.infoArtistTop_left .btn-group {
+    position: absolute;
+    top: 140px;
+    left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoArtistTop_left .btn-group button {
+    margin-right: 20px;
+    padding: 10px;
+    width: 140px;
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: #fff;
+}
+.infoArtistTop_left .btn-group #phatnhac {
+    background-color: rgba(238, 10, 181, 0.712);
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+.infoArtistTop_left .btn-group #phatnhac:hover {
+    background-color: rgba(177, 22, 138, 0.812);
+}
+.infoArtistTop_left .btn-group #quantam {
+    border: 1px solid rgba(245, 245, 245, 0.412);
+    transition: all 0.3s ease-in;
+}
+.infoArtistTop_left .btn-group #quantam:hover {
+    background-color: rgba(133, 127, 133, 0.312);
+}
+.infoArtistTop_left .btn-group p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+}
+#phatnhac .fas {
+    margin-right: 5px;
+}
+#quantam .fas {
+    margin-right: 5px;
+}
+
+.infoArtistT_Right {
+    background: rosybrown;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.infoArtistT_Right img {
+    width: 100%;
+    height: 100%;
+}
+.overise-Info {
+    margin-bottom: 50px;
+}
+.overise-Info ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 750px;
+    background-color: rgba(230, 169, 238, 0.123);
+    border-radius: 30px;
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 130px;
+    border: none;
+    outline: none;
+    list-style: none;
+}
+.overise-Info ul li {
+    border-radius: 30px;
+    padding: 5px 40px 5px 40px;
+}
+.overise-Info ul li a {
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+}
+.overise-Info ul li:hover {
+    background: rgba(233, 227, 232, 0.312);
+}

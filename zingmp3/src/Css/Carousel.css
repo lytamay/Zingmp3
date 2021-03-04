@@ -1,4 +1,4 @@
-.wrap-carousel {
+/* .wrap-carousel {
     position: relative;
     width: 980px;
     height: 230px;
@@ -49,4 +49,89 @@
     width: 980px;
     height: 230px;
     transition: 0.5s;
+} */
+
+.wrap-carousel {
+    width: 980px;
+    height: 230px;
+    /* background-color: red; */
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.wrap-carousel .content-carousel {
+    width: 200px;
+    perspective: 1000px;
+    position: absolute;
+    margin: auto;
+    top: 10px;
+}
+.wrap-carousel .content-carousel .detail-carousel {
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: carousel 15s infinite linear;
+    transform-style: preserve-3d;
+}
+.detail-carousel:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.detail-carousel figure {
+    width: 100%;
+    height: 130px;
+    border: 1px solid #4d444d;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.288);
+    border-radius: 2px;
+}
+.detail-carousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(350px);
+}
+.detail-carousel figure:nth-child(2) {
+    transform: rotateY(45deg) translateZ(350px);
+}
+.detail-carousel figure:nth-child(3) {
+    transform: rotateY(90deg) translateZ(350px);
+}
+.detail-carousel figure:nth-child(4) {
+    transform: rotateY(135deg) translateZ(350px);
+}
+.detail-carousel figure:nth-child(5) {
+    transform: rotateY(180deg) translateZ(350px);
+}
+.detail-carousel figure:nth-child(6) {
+    transform: rotateY(225deg) translateZ(350px);
+}
+.detail-carousel figure:nth-child(7) {
+    transform: rotateY(270deg) translateZ(350px);
+}
+.detail-carousel figure:nth-child(8) {
+    transform: rotateY(320deg) translateZ(350px);
+}
+.detail-carousel img {
+    position: absolute;
+    image-rendering: auto;
+    transition: all 300ms;
+    width: 100%;
+    height: 100%;
+}
+.detail-carousel img:hover {
+    transform: scale(1.1);
+    transition: all 300ms;
+}
+@keyframes carousel {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }

@@ -151,3 +151,7 @@ input[type="range"] {
 .playListMusicRight .show_song_no p:nth-child(2) {
     margin: 0 5px;
 }
+.imgTogle {
+    border-radius: 20px;
+    box-shadow: 20px;
+}

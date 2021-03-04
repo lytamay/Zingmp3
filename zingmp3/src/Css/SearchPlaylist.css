@@ -1,0 +1,13 @@
+.box-list-playlist > p {
+    color: white;
+    font-size: 19px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.list-playlist {
+    width: 960px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 20px;
+}

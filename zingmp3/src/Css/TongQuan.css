@@ -1,0 +1,15 @@
+.tong-quan {
+    margin-top: 10px;
+}
+.tong-quan > p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+}
+.bai-hat-noi-bat {
+    width: 990px;
+    height: 200px;
+    background: violet;
+}

@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaHeart, FaPlay } from "react-icons/fa";
 import "../Css/ItemTrack.css";
 import { Link } from "react-router-dom";
 
 const ItemTrack = (props) => {
     let track = props.track;
+    let index = props.index;
+    let getIndex = props.getIndex;
+    const [isPlay, setIsplay] = useState(false);
     let link = `/thong-tin-ca-si/${track.artist.name}`;
+    const reTurnIndex = () => {
+        getIndex(index);
+    };
     return (
         <div className="wrap-item-track">
             <div className="item-track-left">
-                <button>
+                <button onClick={reTurnIndex}>
                     <FaPlay />
                 </button>
-                {/* anh album */}
                 <img src={track.album.cover_medium} alt={props.tenAlbum} />
                 <div className="item-track-left-title">
                     <p>{track.title}</p>

@@ -1,44 +1,67 @@
 import React from "react";
 import "../Css/NavbarLeft.css";
 import { Link } from "react-router-dom";
-import { FaBeer, FaGithub, FaAddressCard } from "react-icons/fa";
+import {
+    FaGithub,
+    FaAddressCard,
+    FaBullseye,
+    FaChartLine,
+    FaCompactDisc,
+    FaHeadphones,
+    FaHeadset,
+    FaListOl,
+    FaWizardsOfTheCoast,
+} from "react-icons/fa";
+import test from "../Image/customLogo.png";
 function NavbarLeft() {
     return (
         <div className="navbar">
             <div className="navbar-left">
                 <div className="navbar-logo">
-                    <h1>logo</h1>
+                    <img style={{ height: "55px" }} src={test} alt="" />
                 </div>
                 <ul className="navbar-content">
                     <li>
                         <Link to="/khampha">
-                            <FaBeer className="narbar-icon" />
+                            <FaBullseye className="narbar-icon" />
                             Khám phá
                         </Link>
                     </li>
                     <li>
                         <Link to="/zingchart">
-                            <FaGithub className="narbar-icon" />
+                            <FaChartLine className="narbar-icon" />
                             #zingchart
                         </Link>
                     </li>
                     <li>
                         <Link to="/moiphathanh">
-                            <FaAddressCard className="narbar-icon" />
+                            <FaCompactDisc className="narbar-icon" />
                             Mới Phát Hành
                         </Link>
                     </li>
                     <li>
-                        <Link to="/mv">MV</Link>
+                        <Link to="/mv">
+                            <FaHeadphones className="narbar-icon" />
+                            MV
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/chude">Chủ Đề</Link>
+                        <Link to="/chude">
+                            <FaHeadset className="narbar-icon" />
+                            Chủ Đề
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/top100">Top 100</Link>
+                        <Link to="/top100">
+                            <FaListOl className="narbar-icon" />
+                            Top 100
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/fanzone">Fanzone</Link>
+                        <Link to="/fanzone">
+                            <FaWizardsOfTheCoast className="narbar-icon" />
+                            Fanzone
+                        </Link>
                     </li>
                 </ul>
                 <div className="navbar-login">

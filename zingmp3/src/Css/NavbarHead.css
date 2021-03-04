@@ -30,7 +30,11 @@
     height: 40px;
     padding: 10px;
     border-radius: 30px;
-    background-color: rgba(61, 11, 85, 0.7);
+    background-color: rgba(87, 17, 117, 0.61);
+    /* background-color: rgba(61, 11, 85, 0.7); */
+}
+.wraper-navbar-header ul li a .box-search:hover {
+    cursor: pointer;
 }
 .box-search span {
     width: 20px;
@@ -133,4 +137,24 @@
 }
 .out-user:hover {
     background-color: rgb(218, 204, 185);
+}
+
+.search-item {
+    position: absolute;
+    align-items: center;
+    width: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 10px;
+    padding: 10px 10px 20px 10px;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(166, 41, 207, 0.904);
+    padding-left: 35px;
+}
+.search-item p {
+    font-size: 16px;
+    margin: 20px;
+}
+.search-item p::first-letter {
+    text-transform: uppercase;
 }

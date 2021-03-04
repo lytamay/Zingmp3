@@ -1,0 +1,114 @@
+.box-artist {
+    width: 200px;
+    height: 250px;
+    box-sizing: border-box;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.box-avata {
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    border: 0.1px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.box-avata img {
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s ease;
+}
+.box-avata span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    z-index: 22;
+    padding: 20px;
+    border-radius: 50%;
+    padding: 15px;
+    border: 1px solid #fff;
+    visibility: hidden;
+    transition: 0.4s ease;
+}
+.box-avata:hover img {
+    transform: scale(1.1);
+    transition: 0.4s ease-in;
+}
+.box-avata:hover span {
+    visibility: visible;
+}
+.layer-before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+}
+.box-avata:hover .layer-before {
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.377);
+}
+.box-info-artist {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    display: block;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.box-info-artist a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.box-info-artist a:hover {
+    color: rgba(139, 83, 19, 0.8);
+}
+.box-info-artist p {
+    color: rgba(128, 112, 112, 0.904);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-info-artist p > span {
+    margin: 5px;
+}
+
+.box-info-artist button {
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(155, 161, 163, 0.37);
+    outline: none;
+    margin: 10px;
+    margin-left: 35px;
+    background: rgba(84, 37, 94, 0.39);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+.box-info-artist button span {
+    margin-right: 5px;
+}
+.box-info-artist button:hover {
+    background: rgba(73, 21, 83, 0.404);
+}
