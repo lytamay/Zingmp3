@@ -79,7 +79,7 @@ const SearchTrack = (props) => {
             return <SearchPlaylist playlist={searchPlaylist} />;
         } else if (query === "?nghesi") {
             return <SearchArtist artist={searchArtist} />;
-        } else return <SearchMV />;
+        } else return <SearchMV title="Không tìm thấy mv nào !" />;
     };
     return (
         <div className="search">

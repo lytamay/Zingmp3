@@ -89,7 +89,7 @@ const SearcAll = (props) => {
                     {albumArr.length > 0 &&
                         albumArr.map((item, index) => {
                             return (
-                                <div key={index}>
+                                <div key={item.id}>
                                     <Playlist album={item} />
                                 </div>
                             );
