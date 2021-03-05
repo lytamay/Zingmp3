@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { FaPlay, FaUserAlt } from "react-icons/fa";
 import { Link, Route, Router, Switch, useRouteMatch } from "react-router-dom";
 import NavbarHead from "../Component/NavbarHead";
@@ -8,13 +9,33 @@ import KhamPha from "./KhamPha";
 
 const ArtistInfomation = (props) => {
     let { path, url } = useRouteMatch();
+    let match = useRouteMatch();
+    let [artist, setArtist] = useState();
+    useEffect(() => {
+        axios
+            .get(
+                `https://deezerdevs-deezer.p.rapidapi.com/artist/${match.params.id}`,
+                {
+                    headers: {
+                        "x-rapidapi-key":
+                            "9fd6c939aamsh5f72768d77a1559p1dd2d7jsnf23f80d8315a",
+                        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+                    },
+                }
+            )
+            .then((res) => {
+                let data = res.data;
+                setArtist(data);
+            });
+    }, [match.params.id]);
+    console.log(artist);
     return (
         <div>
             <NavbarHead />
             <div className="InfoArtist">
                 <div className="infoArtistTop">
                     <div className="infoArtistTop_left">
-                        <h2>Ten ca si</h2>
+                        {/* {artist.name !== null ? <h2>{artist.name}</h2> : ""} */}
                         <div className="btn-group">
                             <button id="phatnhac">
                                 <FaPlay className="fas" />
@@ -24,15 +45,20 @@ const ArtistInfomation = (props) => {
                                 <FaUserAlt className="fas" />
                                 QUAN TÂM
                             </button>
-                            <p>35K QUAN TÂM</p>
+                            {artist.nb_fan !== null ? (
+                                <p>{artist.nb_fan} NGƯỜI QUAN TÂM</p>
+                            ) : (
+                                ""
+                            )}
                         </div>
                     </div>
-                    <div className="infoArtistT_Right">
-                        <img
-                            src="https://e-cdns-images.dzcdn.net/images/cover/1a8e185e9c26e9b776f54045d8a046be/56x56-000000-80-0-0.jpg"
-                            alt=""
-                        />
-                    </div>
+                    {/* <div className="infoArtistT_Right">
+                        {artist.picture_xl !== null ? (
+                            <img src={artist.picture_xl} alt="" />
+                        ) : (
+                            ""
+                        )}
+                    </div> */}
                 </div>
                 <div className="overise-Info">
                     <ul>

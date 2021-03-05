@@ -28,7 +28,7 @@ function Home() {
                             component={PlayList100}
                         />
                         <Route
-                            path="/thong-tin-ca-si/:name"
+                            path="/thong-tin-ca-si/:name/:id"
                             exact
                             component={ArtistInfomation}
                         />

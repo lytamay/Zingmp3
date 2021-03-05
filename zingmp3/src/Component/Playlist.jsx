@@ -7,11 +7,13 @@ import Loading from "./Loading";
 const Playlist = (props) => {
     let { album } = props;
     let history = useHistory();
+    if (album == null) {
+        return "";
+    }
     let link = `/thong-tin-ca-si/${album.artist.name}`;
     const GotoPagePlayAudio = () => {
         history.push(`/album/${album.album.id}`);
     };
-    console.log(album);
     return (
         <div className="playlist">
             <div className="playlist-avata" onClick={GotoPagePlayAudio}>

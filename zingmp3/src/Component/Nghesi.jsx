@@ -5,9 +5,11 @@ import "../Css/Nghesi.css";
 const Nghesi = (props) => {
     let history = useHistory();
     let artist = props.artist;
-    let link = `/thong-tin-ca-si/${artist.artist.name}`;
+    let link = `/thong-tin-ca-si/${artist.artist.name}/${artist.artist.id}`;
     const handelClick = () => {
-        history.push(`/thong-tin-ca-si/${artist.artist.name}`);
+        history.push(
+            `/thong-tin-ca-si/${artist.artist.name}/${artist.artist.id}`
+        );
     };
     return (
         <div className="box-artist">
