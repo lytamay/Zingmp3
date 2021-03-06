@@ -11,12 +11,12 @@ function App() {
     };
     return (
         <Router>
-            {/* {isChangeFromToHome ? (
+            {isChangeFromToHome ? (
                 <Uilogo onClick={ChangePageHome} />
             ) : (
                 <Home />
-            )} */}
-            <Home />
+            )}
+            {/* <Home /> */}
         </Router>
     );
 }
