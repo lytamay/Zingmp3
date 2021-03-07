@@ -9,6 +9,7 @@ const ItemTrack = (props) => {
     let getIndex = props.getIndex;
     const [isPlay, setIsplay] = useState(false);
     let link = `/thong-tin-ca-si/${track.artist.name}`;
+    let link1 = `/${track.artist.name}/${track.id}`;
     const reTurnIndex = () => {
         getIndex(index);
     };

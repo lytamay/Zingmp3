@@ -1,6 +1,6 @@
 import React from "react";
 import "../Css/NavbarLeft.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
     FaGithub,
     FaAddressCard,
@@ -13,7 +13,12 @@ import {
     FaWizardsOfTheCoast,
 } from "react-icons/fa";
 import test from "../Image/customLogo.png";
+
 function NavbarLeft() {
+    const history = useHistory();
+    const formLogIn = () => {
+        history.push("/login");
+    };
     return (
         <div className="navbar">
             <div className="navbar-left">
@@ -69,7 +74,9 @@ function NavbarLeft() {
                         Đăng nhập để khám phá những playlist dành riêng cho
                         chính bạn.
                     </p>
-                    <button className="navbar-login-button">ĐĂNG NHẬP</button>
+                    <button onClick={formLogIn} className="navbar-login-button">
+                        ĐĂNG NHẬP
+                    </button>
                 </div>
             </div>
         </div>

@@ -1,13 +1,18 @@
 import React from "react";
+import { useHistory } from "react-router";
 import "../Css/TheLoai.css";
 const TheLoai = (props) => {
+    let title = props.title;
+    let url = props.url;
+    let id = props.id;
+    let history = useHistory();
+    const pushID = () => {
+        history.push(`/album/${id}`);
+    };
     return (
-        <div className="wrap-theloai">
-            <img
-                src="https://cdns-images.dzcdn.net/images/artist/4b83630a754c0bf02c9b02f73c7a9d7e/250x250-000000-80-0-0.jpg"
-                alt=""
-            />
-            <p>TEN CHU DE</p>
+        <div className="wrap-theloai" onClick={pushID}>
+            <img src={url} alt="" />
+            <p>{title}</p>
         </div>
     );
 };

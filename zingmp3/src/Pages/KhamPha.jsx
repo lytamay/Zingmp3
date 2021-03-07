@@ -75,7 +75,38 @@ const KhamPha = () => {
                     })}
                 </div>
                 <Chude chude="The loai" />
-                <TheLoai />
+                <div className="the__loai">
+                    <div>
+                        <TheLoai
+                            title="Nhac Au My"
+                            url="https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/5/f/6/e/5f6e11fcb5b21d84cea6975fb176fede.jpg"
+                        />
+                    </div>
+                    <div>
+                        <TheLoai
+                            title="Nhac han"
+                            url="https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/theme/iu.jpg"
+                        />
+                    </div>
+                    <div>
+                        <TheLoai
+                            title="Nhac Nhat"
+                            url="https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/d/3/8/7/d38751482f31a6c60696eb9fd42255c5.jpg"
+                        />
+                    </div>
+                    <div>
+                        <TheLoai
+                            title="Nhac tre"
+                            url="https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/4/2/0/9/4209684c04f48fae6d482d9743c1fa66.jpg"
+                        />
+                    </div>
+                    <div>
+                        <TheLoai
+                            title="Nhac trung quoc"
+                            url="https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/7/7/8/c/778c8762644496a4ed839a081ee43b7c.jpg"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -1,8 +1,10 @@
 .wrap-theloai {
-    width: 200px;
+    width: 170px;
     height: 100px;
     object-fit: cover;
     position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 .wrap-theloai img {
     position: absolute;
@@ -10,6 +12,12 @@
     height: 100%;
     overflow: hidden;
     border-radius: 10px;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+}
+.wrap-theloai:hover img {
+    transform: scale(1.1);
+    transition: 0.4s ease-in;
 }
 
 .wrap-theloai p {

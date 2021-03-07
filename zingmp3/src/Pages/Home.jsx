@@ -8,6 +8,8 @@ import ArtistInfomation from "./ArtistInfomation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PlayList100 from "./PlayList100";
 import SearchTrack from "../Pages/SearchTrack";
+import BaiHat from "./BaiHat";
+import LogIn from "./LogIn";
 
 function Home() {
     return (
@@ -37,6 +39,8 @@ function Home() {
                             exact
                             component={SearchTrack}
                         />
+                        <Route path="/:name/:id" exact component={BaiHat} />
+                        <Route path="/login" exact component={LogIn} />
                     </Switch>
                 </div>
             </div>
